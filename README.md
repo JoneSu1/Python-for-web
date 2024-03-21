@@ -25,3 +25,63 @@ conda create -n 环境的名字 python=3.8
 - 以两个前导下划线开头的标识符表示强私有标识符。
 
 - 如果标识符也以两个尾部下划线结尾，则该标识符是语言定义的特殊名称。
+
+
+**Python 行和缩进**
+
+Python 编程不提供大括号来指示类和函数定义或流程控制的代码块。代码块由严格执行的行缩进表示。
+
+缩进中的空格数是可变的，但块中的所有语句必须缩进相同的数量。
+
+意思就是，缩进相同的才是一个模块，比它缩进少的命令行就是它的上支.
+
+```PYTHON
+import sys
+
+try:
+   # open file stream
+   file = open(file_name, "w")
+except IOError:
+   print "There was an error writing to", file_name
+   sys.exit()
+print "Enter '", file_finish,
+print "' When finished"
+while file_text != file_finish:
+   file_text = raw_input("Enter text: ")
+   if file_text == file_finish:
+      # close the file
+      file.close
+      break
+   file.write(file_text)
+   file.write("\n")
+file.close()
+file_name = raw_input("Enter filename: ")
+if len(file_name) == 0:
+   print "Next time please enter something"
+   sys.exit()
+try:
+   file = open(file_name, "r")
+except IOError:
+   print "There was an error reading file"
+   sys.exit()
+file_text = file.read()
+file.close()
+print file_text
+
+```
+
+**关于python的换行**
+
+- 在没有（），[],{},的时候，需要在结尾加上“/”作为换行符。
+- 而在有以上符号时候，不用使用换行符号.
+
+```
+total = item_one + \
+        item_two + \
+        item_three
+```
+
+```
+days = ['Monday', 'Tuesday', 'Wednesday',
+        'Thursday', 'Friday']
+```
