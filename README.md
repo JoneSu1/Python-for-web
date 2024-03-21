@@ -72,7 +72,7 @@ print file_text
 
 **关于python的换行**
 
-- 在没有（），[],{},的时候，需要在结尾加上“/”作为换行符。
+- 在没有（），[],{},的时候，需要在结尾加上“\”作为换行符。
 - 而在有以上符号时候，不用使用换行符号.
 
 ```
@@ -85,3 +85,21 @@ total = item_one + \
 days = ['Monday', 'Tuesday', 'Wednesday',
         'Thursday', 'Friday']
 ```
+
+**关于如何在python中写注释**
+
+- 首先当然是“#” 这是常见的注释标识
+- 其次就是python特色的多行注释了：'''
+
+```
+# This is a comment.
+# This is a comment, too.
+# This is a comment, too.
+# I said that already.
+
+'''
+This is a multiline
+comment.
+'''
+```
+
